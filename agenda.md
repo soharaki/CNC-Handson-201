@@ -1,47 +1,59 @@
 # Day 1
 
-## Intro
+## イントロダクション
 
-- Our team
-- Instructors
-- Objective of this course
-- Introduction of attendees
+- チームの紹介
+- 講師
+- このコースの目的
+- 参加者への案内
+---
+
+## コンテナ及びDockerの基礎
+
+### 仮想化技術の目的
+
+- リソースをいかに効率よく使用するか
+- セキュリティを担保した環境の構築
+
+### コンテナの技術史
+
+- chroot
+- namespaces
+- cgroup
+- docker
+
+### コンテナはどうやって動くのか？
+
+- コンテナイメージの形式
+- Dockerfile
+- コンテナランタイムとイメージレジストリサーバー
+- コンテイメージのビルド方法
 
 ---
 
-## Container and Docker Basic 
+### ハンズオン環境
 
-### How container works
-
-- Container image format
-- Container runtime and image registry
-- Building container image
-
----
-
-### Lab 
-
-- Accessing to the Lab environment
-  - Register SSH key
+- ハンズオン環境へのアクセス方法
+  - SSH鍵の登録方法
   - SSH to one of the nodes
-- Build, Push and Run your first Container
+- コンテナをビルド、プッシュ、そして動かしてみよう
 
 ---
 
-## Kubernetes Basic
+## Kubernetes(クーバーネティス)の基礎
 
-### Kubernetes Background
+### Kubernetesの背景
 
-- History
-- Concept
+- 歴史
+- コンセプト
 
-### Kubernetes Architecture
+### Kubernetesのアーキテクチャ
 
-- Cluster
-- Nodes
-- Key components
+- クラスタ
+- ノード
+- 鍵となるコンポーネント
 
-### Kubernetes Resources
+### Kubernetesのリソース
 
 - Pod
 - Service
@@ -49,19 +61,19 @@
 
 ---
 
-### Lab 
+### ハンズオン: Kubernetes環境へのデプロイ
 
-- Access to k8s cluster
-- Deploy simple application
+- Kubernetesクラスタへアクセスする
+- アプリケーションをデプロイしてみよう
 
 ---
 
 ## CI/CD
 
-- CI/CD basic concept on K8s
-- Best practice pipeline design
+- k8s上のCI/CD ベーシックコンセプト
+- パイプラインデザインのベストプラクティス
 
-### Demo : simple CI/CD
+### ハンズオン: simple CI/CD
 
 ---
 Q&A, Free lab
@@ -71,26 +83,25 @@ Q&A, Free lab
 # Day 2
 
 ---
+## Kubernetes workloadのためのパッケージリソース
 
-### CNC Reference Architecture
-
-### Container Platform Selection Guide
-
----
-## Package management for Kubernetes workload
+Kubernetes workloadとはKubernetes上にコンテナを起動するために利用するリソースを指します。要はPodやDeploymentのことです。
+Kubernetes workloadのためのパッケージリソースとは、PodやDeploymentを複数まとめてデプロイするためのパッケージ管理用リソースを指します。
 
 - Helm
+- kustomize
+- Operator
+
+
 - Monitoring Kubernetes
 
+- Prometheus/Grafana
+- Thanos
 
-### Lab : Deploying tools for operation on K8s
+### ハンズオン: k8s上の運用をサポートするツールのデプロイ
 
 - Deploy Prometheus/Grafana
 
 ---
 
-## Extending k8s features for specific application workload
-
-- Operator
-
-### Lab : Deploying application with operator
+### ハンズオン: Operatorを使ったアプリケーションのデプロイ
